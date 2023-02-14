@@ -25,10 +25,9 @@ preliminary_SNMF <- function(dart_data, basedir, species, dataset, treatment, po
    lea_plot   <- paste(basedir,species,"/popgen/",treatment,"/lea/K_ce.pdf", sep="")
 
    lea_file_genotype <- read.lfmm(lea_file)
-   write.geno(lea_file_genotype, "lea_file_genotype.geno")
-   
-   snmf_project=snmf("lea_file_genotype.geno", K=2:Kvals, entropy = TRUE, repetitions = Rvals, project = "new")
-   
+   write.geno(lea_file_genotype, paste0(lea_dir,"/lea_file_genotype.geno", sep=""))
+
+   snmf_project=snmf(paste0(lea_dir,"/lea_file_genotype.geno", sep=""), K=2:Kvals, entropy = TRUE, repetitions = Rvals, project = "new")
    pdf(file=lea_plot)
       plot(snmf_project, lwd = 5, col = "red", pch=1)
    dev.off()
