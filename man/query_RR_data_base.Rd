@@ -14,10 +14,11 @@ query_RR_data_base(
 )
 }
 \arguments{
-\item{datafile}{-- name of xls file containing the meta data [required]}
+\item{datafile}{-- name of xls file containing the meta data \link{required}}
 }
 \value{
--- a dart meta data object, consisting of sample names
+\if{html}{\out{<div class="sourceCode">}}\preformatted{    -- a dart meta data object, consisting of sample names
+}\if{html}{\out{</div>}}
 }
 \description{
 Queries DArT data against a sample database, and generates metadata files
