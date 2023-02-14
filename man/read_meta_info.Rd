@@ -7,12 +7,13 @@
 read_meta_info(dart_data, basedir, species, dataset, version = "db")
 }
 \arguments{
-\item{datafile}{-- name of xls file containing the meta data [required]}
+\item{datafile}{-- name of xls file containing the meta data \link{required}}
 
-\item{nas}{-- missing data character [default "-"]}
+\item{nas}{-- missing data character \link{default "-"}}
 }
 \value{
--- a dart meta data object, consisting of sample names
+\if{html}{\out{<div class="sourceCode">}}\preformatted{    -- a dart meta data object, consisting of sample names
+}\if{html}{\out{</div>}}
 }
 \description{
 read.meta.data() opens a meta data file associated with a dart dataset
