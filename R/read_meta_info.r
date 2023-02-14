@@ -55,11 +55,11 @@ read_meta_info <- function(dart_data, basedir, species, dataset, version="db") {
    meta_ordered <- m[ mm_real, ]
    sample_names <- as.character(meta_ordered$sample)
    site         <- as.character(meta_ordered$site)
- 
-    if (any(meta_ordered$lat == "")==TRUE | any(meta_ordered$long == "")==TRUE) {
+   
+   if (any(meta_ordered$lat == "")==TRUE | any(meta_ordered$long == "")==TRUE) {
      cat("  Missing lat/long will generate NAs in lat/long")
    }
- 
+   
    lat          <- as.numeric(meta_ordered$lat)
    long         <- as.numeric(meta_ordered$long)
 
