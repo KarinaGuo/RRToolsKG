@@ -17,7 +17,7 @@
 process_SNMF_for_gdm <- function(basedir, species, dataset, treatment, pop, Ksel) {
 
    require(LEA)
-   snmf_file    <- paste(basedir,species,"/popgen/",treatment,"/lea/",species,"_",dataset,".snmfProject", sep="")
+   snmf_file    <- paste(basedir,species,"/popgen/",treatment,"/lea/lea_file_genotype.snmfProject", sep="")
    if (file.exists(snmf_file)) { 
       cat(   "   Calculating population Q values ...\n") 
    } else { 
